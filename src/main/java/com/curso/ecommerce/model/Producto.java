@@ -15,7 +15,7 @@ public class Producto {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nombre;
-	private String despcripcion;
+	private String descripcion;
 	private String imagen;
 	private double precio;
 	private int cantidad;
@@ -32,12 +32,12 @@ public class Producto {
 
 
 
-	public Producto(Integer id, String nombre, String despcripcion, String imagen, double precio, int cantidad,
+	public Producto(Integer id, String nombre, String descripcion, String imagen, double precio, int cantidad,
 			Usuario usuario) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
-		this.despcripcion = despcripcion;
+		this.descripcion = descripcion;
 		this.imagen = imagen;
 		this.precio = precio;
 		this.cantidad = cantidad;
@@ -68,13 +68,13 @@ public class Producto {
 	}
 
 
-	public String getDespcripcion() {
-		return despcripcion;
+	public String getDescripcion() {
+		return descripcion;
 	}
 
 
-	public void setDespcripcion(String despcripcion) {
-		this.despcripcion = despcripcion;
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
 	}
 
 
@@ -122,7 +122,7 @@ public class Producto {
 
 	@Override
 	public String toString() {
-		return "Producto [id=" + id + ", nombre=" + nombre + ", despcripcion=" + despcripcion + ", imagen=" + imagen
+		return "Producto [id=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + ", imagen=" + imagen
 				+ ", precio=" + precio + ", cantidad=" + cantidad + "]";
 	}
 	
