@@ -119,6 +119,8 @@ public class Producto {
 		this.usuario = usuario;
 	}
 
+	
+	
 
 	@Override
 	public String toString() {

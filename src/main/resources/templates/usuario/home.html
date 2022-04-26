@@ -11,6 +11,7 @@
   <title>Spring eCommerce</title>
 
 
+
   <!-- Bootstrap core CSS -->
   <link th:href="@{vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
 
@@ -21,9 +22,12 @@
 
 <body>
 
-  <div th:include="administrador/templade_admin.html::header">
+  
+  
+  <div th:include="usuario/template_usuario.html::header">
+  
   </div>
-
+  	
     <!-- Page Content -->
     <div class="container">
 
@@ -43,10 +47,12 @@
               <p class="card-text"th:text="${producto.nombre}"></p>
             </div>
             <div class="card-footer">
-              <a th:href="@{/productohome/{id}(id={$producto.id})}" class="btn btn-success">Ver producto</a>
+              <a th:href="@{/productohome/{id} (id=${producto.id}) }" class="btn btn-success">Ver producto</a>
             </div>
           </div>
         </div> 
+
+        
 
       </div>
       <!-- /.row -->
@@ -55,13 +61,14 @@
     <!-- /.container -->
 
     <!-- Footer -->
-      <div th:include="administrador/templade_admin.html::footer">
-  </div>
+    <div th:include="usuario/template_usuario.html::footer">
+    
+    </div>
 
-    <!-- Bootstrap core JavaScript -->
+  <!-- Bootstrap core JavaScript -->
     <script th:src="@{vendor/jquery/jquery.min.js}"></script>
     <script th:src="@{vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
-
+    
   </body>
 
   </html>
